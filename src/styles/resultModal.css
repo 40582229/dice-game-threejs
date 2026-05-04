@@ -1,0 +1,73 @@
+.result-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.result-modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.result-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 100px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.result-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.result-info {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.result-btn {
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.result-modal.win .result-title {
+  color: #2563eb;
+}
+
+.result-modal.win .result-info {
+  color: #059669;
+  font-weight: bold;
+}
+
+.result-modal.win .result-btn {
+  background: #2563eb;
+}
+
+.result-modal.lose .result-title {
+  color: #dc2626;
+}
+
+.result-modal.lose .result-info {
+  color: #374151;
+}
+
+.result-modal.lose .result-btn {
+  background: #dc2626;
+}

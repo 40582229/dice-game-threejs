@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+  <div id="resultModal" class="result-modal">
+    <div class="result-content">
+      <h2 class="result-title"></h2>
+      <p class="result-info"></p>
+      <button class="result-btn"></button>
+    </div>
+  </div>
+
+    <div class="game-container">
+      <div class="top-bar">
+        <div class="balance-container">
+          <div id="balance" class="balance">Balance: 10.00</div>
+        </div>
+      </div>
+
+      <div class="game-canvas">
+        <canvas class="webgl"></canvas>
+      </div>
+      <div class="bet-amount-container">
+        <button class="bet-btn minus">−</button>
+        <input
+          id="betAmount"
+          class="bet-amount"
+          type="number"
+          value="1"
+        />
+        <button class="bet-btn plus">+</button>
+      </div>
+
+      <div class="face-grid">
+        <div class="faceContainer" data-sums="2,12">
+          <button class="faceBtn risk-risky" data-pair="2 or 12">
+            <div class="pairDisplay">
+              <div class="pairName">2 or 12</div>
+            </div>
+          </button>
+          <div class="pairInfo">
+            <div class="multiplierLabel">x9.00</div>
+            <div class="oddsLabel">5.6% chance</div>
+          </div>
+        </div>
+
+        <div class="faceContainer" data-sums="3,11">
+          <button class="faceBtn risk-high" data-pair="3 or 11">
+            <div class="pairDisplay">
+              <div class="pairName">3 or 11</div>
+            </div>
+          </button>
+          <div class="pairInfo">
+            <div class="multiplierLabel">x4.50</div>
+            <div class="oddsLabel">11.1% chance</div>
+          </div>
+        </div>
+
+        <div class="faceContainer" data-sums="4,10">
+          <button class="faceBtn risk-medium" data-pair="4 or 10">
+            <div class="pairDisplay">
+              <div class="pairName">4 or 10</div>
+            </div>
+          </button>
+          <div class="pairInfo">
+            <div class="multiplierLabel">x3.00</div>
+            <div class="oddsLabel">16.7% chance</div>
+          </div>
+        </div>
+
+        <div class="faceContainer" data-sums="5,9">
+          <button class="faceBtn risk-low" data-pair="5 or 9">
+            <div class="pairDisplay">
+              <div class="pairName">5 or 9</div>
+            </div>
+          </button>
+          <div class="pairInfo">
+            <div class="multiplierLabel">x2.25</div>
+            <div class="oddsLabel">22.2% chance</div>
+          </div>
+        </div>
+
+        <div class="faceContainer" data-sums="6,7,8">
+          <button class="faceBtn risk-safe" data-pair="6, 7, 8">
+            <div class="pairDisplay">
+              <div class="pairName">6, 7, 8</div>
+            </div>
+          </button>
+          <div class="pairInfo">
+            <div class="multiplierLabel">x1.25</div>
+            <div class="oddsLabel">44.4% chance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
